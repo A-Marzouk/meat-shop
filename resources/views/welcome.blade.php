@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
-                        <h1>HALAL MEAT IN UKRAINE ZAPOROZHYE</h1>
+                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">NOW IN ZAPOROZHYE</span></h1>
                         <p class="mb-5 font-weight-bold">
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
-                        <h1>HALAL MEAT IN UKRAINE ZAPOROZHYE</h1>
+                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">NOW IN ZAPOROZHYE</span></h1>
                         <p class="mb-5 font-weight-bold">
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
@@ -97,6 +97,91 @@
         </div>
     </section>
 
+    <section class="section bg-light element-animate">
+
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>Our Menu</h2>
+                        <span class="back-text-dark">Menu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="text order-1">
+                            <h3>Grilled Caesar salad, shaved reggiano</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="text order-1">
+                            <h3>Grilled Caesar salad, shaved reggiano</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image" style="background-image: url('img/dishes_1.jpg');"></div>
+                        <div class="text">
+                            <h3>Spicy Calamari and beans</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image" style="background-image: url('img/dishes_1.jpg');"></div>
+                        <div class="text">
+                            <h3>Spicy Calamari and beans</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="text order-1">
+                            <h3>Grilled Caesar salad, shaved reggiano</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
+                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="text order-1">
+                            <h3>Grilled Caesar salad, shaved reggiano</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
+                            <p class="text-primary h3">$12.00</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section> <!-- .section -->
 
     <section class="py-5 bg-light">
         <div class="container">
