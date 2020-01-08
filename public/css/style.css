@@ -11,6 +11,10 @@ body {
   color: #868e96;
 }
 
+#tawkchat-status-text-container.theme-background-color {
+  background-color: #cf1d16 !important;
+}
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
