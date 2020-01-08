@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://halalmeatinukraine.com/" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="https://halalmeatinukraine.com/favicon.png"/>
 
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -142,19 +142,46 @@
 <script src="js/main.js"></script>
 <script src="js/app.js"></script>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-        s1.async=true;
-        s1.src='https://embed.tawk.to/5e15346e27773e0d832c6013/default';
-        s1.charset='UTF-8';
-        s1.setAttribute('crossorigin','*');
-        s0.parentNode.insertBefore(s1,s0);
-    })();
-</script>
-<!--End of Tawk.to Script-->
+{{--<!--Start of Tawk.to Script-->--}}
+{{--<script type="text/javascript">--}}
+    {{--var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();--}}
+    {{--(function(){--}}
+        {{--var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];--}}
+        {{--s1.async=true;--}}
+        {{--s1.src='https://embed.tawk.to/5e15346e27773e0d832c6013/default';--}}
+        {{--s1.charset='UTF-8';--}}
+        {{--s1.setAttribute('crossorigin','*');--}}
+        {{--s0.parentNode.insertBefore(s1,s0);--}}
+    {{--})();--}}
+{{--</script>--}}
+{{--<!--End of Tawk.to Script-->--}}
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            xfbml            : true,
+            version          : 'v5.0'
+        });
+    };
+
+    (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="100805368122380"
+     theme_color="#0084ff"
+     logged_in_greeting="Welcome to Halal meat in Ukraine, How can we help you?"
+     logged_out_greeting="Welcome to Halal meat in Ukraine, How can we help you?">
+</div>
 
 </body>
 </html>
