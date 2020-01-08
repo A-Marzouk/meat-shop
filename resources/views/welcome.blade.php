@@ -64,8 +64,8 @@
                     </span>
                     <h4 class="mb-4 text-primary">Fast Delivery</h4>
                     <p>
-                       Halal meat in Ukraine now is in Zaporozhye. <br/>
-                        Delivery within 60 minutes.
+                       Halal meat in Ukraine now is in Zaporozhye.
+                        Beef, Lamb, chicken, burger, minced meat and Lola kebab. Delivery within 60 minutes.
                     </p>
                 </div>
             </div>

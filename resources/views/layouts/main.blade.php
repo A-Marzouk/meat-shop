@@ -1,9 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Halal meat in Ukraine</title>
+    <title>Halal meat in Ukraine, Zaporozhye</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Fresh and Healthy Halal meat in Ukraine. Now in Zaporozhye city. Beef, Lamb, chicken, burger, minced meat and Lola kebab."/>
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Halal meat in Ukraine" />
+    <meta property="og:description" content="Fresh and Healthy Halal meat in Ukraine, Zaporozhye" />
+    <meta property="og:url" content="https://halalmeatinukraine.com/" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
@@ -81,8 +89,8 @@
                     Halal meat in Ukraine is an online butcher shop for halal meat and chicken in Ukraine. We sell quality meat with unparalleled taste at the most affordable prices, fresh, healthy and Halal.
                 </p>
                 <ul class="list-unstyled footer-link d-flex footer-social">
-                    <li><a href="facebook.com/halalmeatinukraine" class="p-2"><span class="fa fa-facebook"></span></a></li>
-                    <li><a href="instagram.com/halalmeatinukraine" class="p-2"><span class="fa fa-instagram"></span></a></li>
+                    <li><a href="https://facebook.com/halalmeatinukraine" class="p-2"><span class="fa fa-facebook"></span></a></li>
+                    <li><a href="https://instagram.com/halalmeatinukraine" class="p-2"><span class="fa fa-instagram"></span></a></li>
                 </ul>
 
             </div>
