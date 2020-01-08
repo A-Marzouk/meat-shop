@@ -412,6 +412,20 @@ header .navbar .cta-btn a:hover {
   text-transform: uppercase;
 }
 
+.my-logo{
+    width:100px;
+}
+
+@media only screen and (max-width: 768px){
+    .heading-wrap .back-text-dark{
+        font-size: 50px !important;
+    }
+
+    .my-logo{
+        width:50px;
+    }
+}
+
 .heading-wrap .back-text-dark {
   color: #e3e3e3 !important;
 }

@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="/img/logo-closed-2.png" alt="logo" width="100px">
+                <img src="/img/logo-closed-2.png" alt="logo" class="my-logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item cta-btn">
-                        <a class="nav-link" href="javascript:void(0)">ORDER NOW</a>
+                        <a class="nav-link" style="display: flex;justify-content: center;" href="javascript:void(0)">ORDER NOW</a>
                     </li>
                 </ul>
 
