@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
-                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">NOW IN ZAPOROZHYE</span></h1>
+                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">HALAL MADE EASIER IN ZAPOROZHYE</span></h1>
                         <p class="mb-5 font-weight-bold">
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="row slider-text align-items-center justify-content-center">
                     <div class="col-md-8 text-center col-sm-12 element-animate">
-                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">NOW IN ZAPOROZHYE</span></h1>
+                        <h1>HALAL MEAT IN UKRAINE <br/> <span style="font-size: large;">HALAL MADE EASIER IN ZAPOROZHYE</span></h1>
                         <p class="mb-5 font-weight-bold">
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
@@ -39,58 +39,33 @@
     <section class="section bg-light element-animate" id="products">
         <div class="container">
             <div class="row">
+
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
                     <span class="display-4 d-block mb-4">
-                        <img src="/img/beef-icon.png" alt="beef icon">
+                        <img src="/img/halal.png" alt="Halal icon">
                     </span>
-                    <h4 class="mb-4 text-primary">Beef</h4>
+                    <h4 class="mb-4 text-primary">100% Halal</h4>
                     <p>
-                        Fresh Halal <b>cattle meat</b>, high-quality protein and nutrients, perfect for steak and steamed meatball.
+                        Our meet is processed, made, produced and stored using methods that have been cleansed according to Islamic law.
                     </p>
                 </div>
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
                     <span class="display-4 d-block mb-4">
-                        <img src="/img/lamb-icon.png" alt="lamb icon">
+                        <img src="/img/money.png" alt="Halal icon">
                     </span>
-                    <h4 class="mb-4 text-primary">Lamb</h4>
+                    <h4 class="mb-4 text-primary">Affordable</h4>
                     <p>
-                        Fresh Halal <b>sheep meat</b>, perfect for Soup, Mansaf and many other dishes.
+                        All products are priced reasonably, to make Halal meat available for everyone.
                     </p>
                 </div>
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
                     <span class="display-4 d-block mb-4">
-                        <img src="/img/minced-meat-icon.png" alt="minced meat icon">
+                        <img src="/img/truck.png" alt="delivery icon">
                     </span>
-                    <h4 class="mb-4 text-primary">minced meat</h4>
+                    <h4 class="mb-4 text-primary">Fast Delivery</h4>
                     <p>
-                       Also known as '<b>Фарш</b>(ru)'.<br> finely minced beef, lamb or chicken.
-                    </p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
-                    <span class="display-4 d-block mb-4">
-                        <img src="/img/burger.png" alt="burger icon">
-                    </span>
-                    <h4 class="mb-4 text-primary">Burger</h4>
-                    <p>
-                       Make your own Halal Hamburger sandwiches at home with our perfect <b>beef burgers</b>.<br/>
-                    </p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
-                    <span class="display-4 d-block mb-4">
-                        <img src="/img/shashlik.png" alt="shashlik icon">
-                    </span>
-                    <h4 class="mb-4 text-primary">Lola kebab</h4>
-                    <p>
-                        Gathering for Shashlik ? Order Halal, Fresh and ready to cook <b>Lola Kebab</b>
-                    </p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">
-                     <span class="display-4 d-block mb-4">
-                        <img src="/img/chicken-icon.png" alt="chicken icon">
-                    </span>
-                    <h4 class="mb-4 text-primary">Chicken</h4>
-                    <p>
-                        100% Halal chicken, get whole chicken, your favorite parts or fillet.
+                       Halal meat in Ukraine now is in Zaporozhye. <br/>
+                        Delivery within 60 minutes.
                     </p>
                 </div>
             </div>
@@ -115,64 +90,71 @@
             <div class="row no-gutters">
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/beef.webp');"></div>
                         <div class="text order-1">
-                            <h3>Grilled Caesar salad, shaved reggiano</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Beef</h3>
+                            <p>Fresh Halal <b>cattle meat</b>, high-quality protein and nutrients, perfect for steak and steamed meatball.</p>
+                            <p class="text-primary h3">UAH 145.00 /kg</p>
                         </div>
 
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/lamb-dish.jpg');"></div>
                         <div class="text order-1">
-                            <h3>Grilled Caesar salad, shaved reggiano</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Lamb (Mutton)</h3>
+                            <p> Fresh Halal <b>sheep meat</b>, perfect for Soup, Mansaf and many other dishes.</p>
+                            <p class="text-primary h3">UAH 140.00 /kg</p>
                         </div>
 
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image" style="background-image: url('img/dishes_1.jpg');"></div>
+                        <div class="bg-image" style="background-image: url('img/minced-meat.png');"></div>
                         <div class="text">
-                            <h3>Spicy Calamari and beans</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Minced meat</h3>
+                            <p>Also known as '<b>Фарш</b>(ru)'.<br> finely minced beef, lamb or chicken.</p>
+                            <p class="text-primary h3">UAH 145.00 /kg</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image" style="background-image: url('img/dishes_1.jpg');"></div>
+                        <div class="bg-image" style="background-image: url('img/burger-dish.png');"></div>
                         <div class="text">
-                            <h3>Spicy Calamari and beans</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Burger</h3>
+                            <p>
+                                Make your own Halal Hamburger sandwiches at home with our perfect <b>beef burgers</b>
+                            </p>
+                            <p class="text-primary h3">UAH 150.00 /kg</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/lola-kebab.jpg');"></div>
                         <div class="text order-1">
-                            <h3>Grilled Caesar salad, shaved reggiano</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Lola kebab</h3>
+                            <p>
+                                Gathering for Shashlik ? Order Halal, Fresh and ready to cook <b>Lola Kebab</b>
+                            </p>
+                            <p class="text-primary h3">UAH 160.00 /kg</p>
                         </div>
 
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/dishes_4.jpg');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/chicken-meat.jpg');"></div>
                         <div class="text order-1">
-                            <h3>Grilled Caesar salad, shaved reggiano</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo delectus...</p>
-                            <p class="text-primary h3">$12.00</p>
+                            <h3>Chicken</h3>
+                            <p>
+                                100% Halal chicken, get whole chicken, your favorite parts or fillet.
+                            </p>
+                            <p class="text-primary h3">UAH 90.00 /kg</p>
                         </div>
 
                     </div>

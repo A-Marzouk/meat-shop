@@ -11,8 +11,10 @@ body {
   color: #868e96;
 }
 
-#tawkchat-status-text-container.theme-background-color {
-  background-color: #cf1d16 !important;
+.sched .text, .blog .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  height: 250px;
 }
 
 a {
