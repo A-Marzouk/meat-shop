@@ -1934,6 +1934,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderComponent",
   data: function data() {
@@ -1947,7 +1976,10 @@ __webpack_require__.r(__webpack_exports__);
       deliverTime: '',
       address: '',
       comments: '',
-      currentStep: 1
+      currentStep: 1,
+      delivery: 25,
+      meat: 0,
+      Total: 25
     };
   },
   methods: {
@@ -1976,7 +2008,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".red-btn a[data-v-082b38fa] {\n  background: #cf1d16;\n  color: #fff !important;\n  text-transform: uppercase;\n  padding: 15px 20px !important;\n  line-height: 1;\n  font-weight: bold;\n  -webkit-transition: 0.3s all ease;\n  transition: 0.3s all ease;\n}\n.thanks-text[data-v-082b38fa] {\n  color: black;\n  font-weight: 600;\n  font-size: large;\n}", ""]);
+exports.push([module.i, ".red-btn a[data-v-082b38fa] {\n  background: #cf1d16;\n  color: #fff !important;\n  text-transform: uppercase;\n  padding: 15px 20px !important;\n  line-height: 1;\n  font-weight: bold;\n  -webkit-transition: 0.3s all ease;\n  transition: 0.3s all ease;\n}\n.thanks-text[data-v-082b38fa] {\n  color: black;\n  font-weight: 600;\n  font-size: large;\n}\n.default-text[data-v-082b38fa] {\n  color: darkslategray;\n  font-weight: 600;\n}", ""]);
 
 // exports
 
@@ -20255,205 +20287,399 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticStyle: { "margin-top": "-55px" } }, [
-    _vm.currentStep === 1
-      ? _c(
-          "div",
-          {
-            staticClass:
-              "order-first-page d-flex flex-column align-items-start w-100"
-          },
-          [
-            _c("div", { staticClass: "mt-2 w-100" }, [
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "form-group w-100 d-flex flex-column align-items-start"
-                },
-                [
-                  _c("label", { attrs: { for: "meatType" } }, [
-                    _vm._v("Select meat")
-                  ]),
-                  _vm._v(" "),
+    _c("div", { staticClass: "row d-flex align-items-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _vm.currentStep === 1
+          ? _c(
+              "div",
+              {
+                staticClass:
+                  "order-first-page d-flex flex-column align-items-start w-100"
+              },
+              [
+                _c("div", { staticClass: "mt-2 w-100" }, [
                   _c(
-                    "select",
+                    "div",
                     {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.meatType,
-                          expression: "meatType"
-                        }
-                      ],
-                      staticClass: "custom-select w-100",
-                      attrs: { name: "meatType", id: "meatType" },
-                      on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.meatType = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
-                        }
-                      }
+                      staticClass:
+                        "form-group w-100 d-flex flex-column align-items-start"
                     },
                     [
-                      _c("option", { attrs: { value: "select" } }, [
-                        _vm._v("-- Meat type --")
+                      _c("label", { attrs: { for: "meatType" } }, [
+                        _vm._v("Select meat")
                       ]),
                       _vm._v(" "),
-                      _c("option", { attrs: { value: "beef" } }, [
-                        _vm._v("Beef")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "lamb" } }, [
-                        _vm._v("Lamb")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "chicken" } }, [
-                        _vm._v("Chicken")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "minced-meat" } }, [
-                        _vm._v("Minced meat")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "burger" } }, [
-                        _vm._v("Burger")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Lola kebab" } }, [
-                        _vm._v("Lola Kebab")
-                      ])
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "form-group w-100 d-flex flex-column align-items-start"
-                },
-                [
-                  _c("label", {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.meatType === "lamb",
-                        expression: "meatType === 'lamb'"
-                      }
-                    ],
-                    attrs: { for: "secondMeatType" }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      directives: [
+                      _c(
+                        "select",
                         {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.meatType === "lamb",
-                          expression: "meatType === 'lamb'"
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.meatType,
+                              expression: "meatType"
+                            }
+                          ],
+                          staticClass: "custom-select w-100",
+                          attrs: { name: "meatType", id: "meatType" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.meatType = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            }
+                          }
                         },
+                        [
+                          _c("option", { attrs: { value: "select" } }, [
+                            _vm._v("-- Meat type --")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "beef" } }, [
+                            _vm._v("Beef")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "lamb" } }, [
+                            _vm._v("Lamb")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "chicken" } }, [
+                            _vm._v("Chicken")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "minced-meat" } }, [
+                            _vm._v("Minced meat")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "burger" } }, [
+                            _vm._v("Burger")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "Lola kebab" } }, [
+                            _vm._v("Lola Kebab")
+                          ])
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "form-group w-100 d-flex flex-column align-items-start"
+                    },
+                    [
+                      _c("label", {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.meatType === "lamb",
+                            expression: "meatType === 'lamb'"
+                          }
+                        ],
+                        attrs: { for: "secondMeatType" }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.meatType === "lamb",
+                              expression: "meatType === 'lamb'"
+                            },
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.meatSecondType,
+                              expression: "meatSecondType"
+                            }
+                          ],
+                          staticClass: "custom-select w-100",
+                          attrs: { name: "second-type", id: "secondMeatType" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.meatSecondType = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            }
+                          }
+                        },
+                        [
+                          _c("option", { attrs: { value: "select" } }, [
+                            _vm._v("Meat second type")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "leg-boneless" } }, [
+                            _vm._v(
+                              "\n                                Leg Boneless\n                            "
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "option",
+                            { attrs: { value: "Swift-Lamb-Rack" } },
+                            [_vm._v("Swift Lamb Rack")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "option",
+                            { attrs: { value: "lamb-hind-shank" } },
+                            [_vm._v("Lamb Hind Shank")]
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "form-group d-flex flex-column align-items-start"
+                    },
+                    [
+                      _c("label", { attrs: { for: "kg" } }, [
+                        _vm._v("How many Kgs?")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.kg,
+                            expression: "kg"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          step: "1",
+                          min: "1",
+                          placeholder: "2 Kgs",
+                          max: "10",
+                          id: "kg"
+                        },
+                        domProps: { value: _vm.kg },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.kg = $event.target.value
+                          }
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-flex w-100 align-items-end justify-content-end red-btn"
+                    },
+                    [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:void(0)" },
+                          on: {
+                            click: function($event) {
+                              _vm.currentStep++
+                            }
+                          }
+                        },
+                        [_vm._v("Next")]
+                      )
+                    ]
+                  )
+                ])
+              ]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.currentStep === 2
+          ? _c("div", { staticClass: "order-second-page" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "form-control mt-2",
+                  attrs: { type: "text", placeholder: "Name", required: "" },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.phone,
+                      expression: "phone"
+                    }
+                  ],
+                  staticClass: "form-control mt-2",
+                  attrs: {
+                    type: "tel",
+                    placeholder: "Phone number",
+                    required: ""
+                  },
+                  domProps: { value: _vm.phone },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.phone = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.email,
+                      expression: "email"
+                    }
+                  ],
+                  staticClass: "form-control mt-2",
+                  attrs: { type: "email", placeholder: "Email", required: "" },
+                  domProps: { value: _vm.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.email = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.deliverTime,
+                      expression: "deliverTime"
+                    }
+                  ],
+                  staticClass: "form-control mt-2",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Preferred delivery time",
+                    required: ""
+                  },
+                  domProps: { value: _vm.deliverTime },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.deliverTime = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.address,
+                      expression: "address"
+                    }
+                  ],
+                  staticClass: "form-control mt-2",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Full Address",
+                    required: ""
+                  },
+                  domProps: { value: _vm.address },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.address = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "form-group w-100 d-flex flex-column align-items-start mt-3"
+                  },
+                  [
+                    _c("label", { attrs: { for: "comments" } }, [
+                      _vm._v("Any special orders or comments?")
+                    ]),
+                    _vm._v(" "),
+                    _c("textarea", {
+                      directives: [
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.meatSecondType,
-                          expression: "meatSecondType"
+                          value: _vm.comments,
+                          expression: "comments"
                         }
                       ],
-                      staticClass: "custom-select w-100",
-                      attrs: { name: "second-type", id: "secondMeatType" },
+                      staticClass: "form-control",
+                      attrs: { type: "text", id: "comments", required: "" },
+                      domProps: { value: _vm.comments },
                       on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.meatSecondType = $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.comments = $event.target.value
                         }
                       }
-                    },
-                    [
-                      _c("option", { attrs: { value: "select" } }, [
-                        _vm._v("Meat second type")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "leg-boneless" } }, [
-                        _vm._v(
-                          "\n                        Leg Boneless\n                    "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "Swift-Lamb-Rack" } }, [
-                        _vm._v("Swift Lamb Rack")
-                      ]),
-                      _vm._v(" "),
-                      _c("option", { attrs: { value: "lamb-hind-shank" } }, [
-                        _vm._v("Lamb Hind Shank")
-                      ])
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "form-group d-flex flex-column align-items-start"
-                },
-                [
-                  _c("label", { attrs: { for: "kg" } }, [
-                    _vm._v("How many Kgs?")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.kg,
-                        expression: "kg"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "number",
-                      step: "1",
-                      min: "1",
-                      placeholder: "2 Kgs",
-                      max: "10",
-                      id: "kg"
-                    },
-                    domProps: { value: _vm.kg },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.kg = $event.target.value
-                      }
-                    }
-                  })
-                ]
-              ),
+                    })
+                  ]
+                )
+              ]),
               _vm._v(" "),
               _c(
                 "div",
@@ -20472,216 +20698,89 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Next")]
+                    [_vm._v("FINISH ORDER")]
                   )
                 ]
               )
             ])
-          ]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.currentStep === 2
-      ? _c("div", { staticClass: "order-second-page" }, [
-          _c("div", { staticClass: "form-group" }, [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.name,
-                  expression: "name"
-                }
-              ],
-              staticClass: "form-control mt-2",
-              attrs: { type: "text", placeholder: "Name", required: "" },
-              domProps: { value: _vm.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.name = $event.target.value
-                }
-              }
-            }),
+          : _vm._e()
+      ]),
+      _vm._v(" "),
+      _vm.currentStep !== 3
+        ? _c("div", { staticClass: "col-md-4 default-text" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _vm._v("\n                    Delivery\n                ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.delivery) +
+                    " UAH\n                "
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.phone,
-                  expression: "phone"
-                }
-              ],
-              staticClass: "form-control mt-2",
-              attrs: { type: "tel", placeholder: "Phone number", required: "" },
-              domProps: { value: _vm.phone },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.phone = $event.target.value
-                }
-              }
-            }),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _vm._v("\n                    Order\n                ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.meat) +
+                    " UAH\n                "
+                )
+              ])
+            ]),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.email,
-                  expression: "email"
-                }
-              ],
-              staticClass: "form-control mt-2",
-              attrs: { type: "email", placeholder: "Email", required: "" },
-              domProps: { value: _vm.email },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.email = $event.target.value
-                }
-              }
-            }),
+            _c("hr"),
             _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.deliverTime,
-                  expression: "deliverTime"
-                }
-              ],
-              staticClass: "form-control mt-2",
-              attrs: {
-                type: "text",
-                placeholder: "Preferred delivery time",
-                required: ""
-              },
-              domProps: { value: _vm.deliverTime },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.deliverTime = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.address,
-                  expression: "address"
-                }
-              ],
-              staticClass: "form-control mt-2",
-              attrs: {
-                type: "text",
-                placeholder: "Full Address",
-                required: ""
-              },
-              domProps: { value: _vm.address },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.address = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "form-group w-100 d-flex flex-column align-items-start mt-3"
-              },
-              [
-                _c("label", { attrs: { for: "comments" } }, [
-                  _vm._v("Any special orders or comments?")
-                ]),
-                _vm._v(" "),
-                _c("textarea", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.comments,
-                      expression: "comments"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", id: "comments", required: "" },
-                  domProps: { value: _vm.comments },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.comments = $event.target.value
-                    }
-                  }
-                })
-              ]
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass:
-                "d-flex w-100 align-items-end justify-content-end red-btn"
-            },
-            [
-              _c(
-                "a",
-                {
-                  attrs: { href: "javascript:void(0)" },
-                  on: {
-                    click: function($event) {
-                      _vm.currentStep++
-                    }
-                  }
-                },
-                [_vm._v("Next")]
-              )
-            ]
-          )
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.currentStep === 3
-      ? _c("div", { staticClass: "order-third-page" }, [
-          _c("div", { staticClass: "col-md-12 text-center thanks-text mb-5" }, [
-            _vm._v(
-              "\n            Thank you for your order! our sales manager will get in touch with you soon!\n        "
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "red-btn" }, [
-            _c(
-              "a",
-              {
-                attrs: { href: "javascript:void(0)" },
-                on: { click: _vm.startNewOrder }
-              },
-              [_vm._v("Make another order")]
-            )
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-8" }, [
+                _vm._v("\n                    Total\n                ")
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(_vm.delivery + _vm.meat) +
+                    " UAH\n                "
+                )
+              ])
+            ])
           ])
-        ])
-      : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-12" }, [
+        _vm.currentStep === 3
+          ? _c("div", { staticClass: "order-third-page" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-12 text-center thanks-text mb-5" },
+                [
+                  _vm._v(
+                    "\n                Thank you for your order! our sales manager will get in touch with you soon!\n            "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "red-btn" }, [
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "javascript:void(0)" },
+                    on: { click: _vm.startNewOrder }
+                  },
+                  [_vm._v("Make another order")]
+                )
+              ])
+            ])
+          : _vm._e()
+      ])
+    ])
   ])
 }
 var staticRenderFns = []

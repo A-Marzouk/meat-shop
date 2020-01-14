@@ -180,7 +180,7 @@
 
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-6 text-center">
+                <div class="col-lg-11 text-center">
                     <div class="row">
                         <div class="col-md-12">
                             <div id="orderComponent">
