@@ -18,7 +18,7 @@ class OrdersController extends Controller
         $msg     .= "\nPhone: " . $request->phone;
         $msg     .= "\nEmail: " . $request->email;
         $msg     .= "\nDelivery time: " . $request->deliverTime;
-        $msg     .= "\nAdress: " . $request->adress;
+        $msg     .= "\nAddress: " . $request->address;
         $msg     .= "\nComments: " . $request->comments;
         $msg     .= "\n\nTotal: " . $request->total;
 
