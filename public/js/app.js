@@ -1977,7 +1977,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       meatType: 'select',
-      meatSecondType: 'leg',
+      meatSecondType: 'rack',
       kg: 1,
       name: '',
       phone: '',
@@ -2015,19 +2015,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     calculateTotalPrice: function calculateTotalPrice() {
       this.meat = this.meatPrices[this.meatType];
-      this.total = this.meatPrices[this.meatType] + this.delivery;
 
       if (this.meatSecondType === 'rack') {
         this.meat = 120;
-        this.total = 120 + this.delivery;
       }
 
       if (this.meatSecondType === 'hind') {
         this.meat = 130;
-        this.total = 130 + this.delivery;
       }
 
-      this.total = this.kg * this.total;
+      this.total = this.kg * this.meat + this.delivery;
     },
     goToStepTwo: function goToStepTwo() {
       // validate that meat is selected && kg is not empty
@@ -20574,7 +20571,7 @@ var render = function() {
                           expression: "errors.generalError.length > 1"
                         }
                       ],
-                      staticClass: "error"
+                      staticClass: "error mb-2"
                     },
                     [
                       _vm._v(
@@ -20779,7 +20776,7 @@ var render = function() {
                       expression: "errors.generalError.length > 1"
                     }
                   ],
-                  staticClass: "error"
+                  staticClass: "error mb-2"
                 },
                 [
                   _vm._v(
@@ -20826,51 +20823,58 @@ var render = function() {
       ]),
       _vm._v(" "),
       _vm.currentStep !== 3
-        ? _c("div", { staticClass: "col-md-4 default-text" }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-8" }, [
-                _vm._v("\n                    Delivery\n                ")
+        ? _c(
+            "div",
+            {
+              staticClass: "col-md-4 default-text",
+              staticStyle: { "margin-top": "25px" }
+            },
+            [
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-8 col-6" }, [
+                  _vm._v("\n                    Delivery\n                ")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4 col-6" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.delivery) +
+                      " UAH\n                "
+                  )
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.delivery) +
-                    " UAH\n                "
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-8" }, [
-                _vm._v("\n                    Order\n                ")
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-8 col-6" }, [
+                  _vm._v("\n                    Order\n                ")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4 col-6" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.meat * _vm.kg) +
+                      " UAH\n                "
+                  )
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.meat) +
-                    " UAH\n                "
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-md-8" }, [
-                _vm._v("\n                    Total\n                ")
-              ]),
+              _c("hr"),
               _vm._v(" "),
-              _c("div", { staticClass: "col-md-4" }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.total) +
-                    " UAH\n                "
-                )
+              _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-md-8 col-6" }, [
+                  _vm._v("\n                    Total\n                ")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-4 col-6" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.total) +
+                      " UAH\n                "
+                  )
+                ])
               ])
-            ])
-          ])
+            ]
+          )
         : _vm._e(),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-12" }, [

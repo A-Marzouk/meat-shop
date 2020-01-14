@@ -33,7 +33,7 @@
                                    @change="calculateTotalPrice"
                                    class="form-control">
                         </div>
-                        <div class="error" v-show="errors.generalError.length > 1">
+                        <div class="error mb-2" v-show="errors.generalError.length > 1">
                             {{errors.generalError}}
                         </div>
                         <div class="d-flex w-100 align-items-end justify-content-end red-btn">
@@ -58,7 +58,7 @@
                                       required></textarea>
                         </div>
                     </div>
-                    <div class="error" v-show="errors.generalError.length > 1">
+                    <div class="error mb-2" v-show="errors.generalError.length > 1">
                         {{errors.generalError}}
                     </div>
 
@@ -68,29 +68,29 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 default-text" v-if="currentStep !== 3">
+            <div class="col-md-4 default-text" style="margin-top: 25px;" v-if="currentStep !== 3">
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-6">
                         Delivery
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         {{delivery}} UAH
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-6">
                         Order
                     </div>
-                    <div class="col-md-4">
-                        {{meat}} UAH
+                    <div class="col-md-4 col-6">
+                        {{meat*kg}} UAH
                     </div>
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-6">
                         Total
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-6">
                         {{total}} UAH
                     </div>
                 </div>
@@ -117,7 +117,7 @@
         data() {
             return {
                 meatType: 'select',
-                meatSecondType: 'leg',
+                meatSecondType: 'rack',
                 kg: 1,
                 name: '',
                 phone: '',
@@ -155,17 +155,14 @@
             },
             calculateTotalPrice() {
                 this.meat = this.meatPrices[this.meatType];
-                this.total = this.meatPrices[this.meatType] + this.delivery;
                 if (this.meatSecondType === 'rack') {
                     this.meat = 120;
-                    this.total = 120 + this.delivery;
                 }
                 if (this.meatSecondType === 'hind') {
                     this.meat = 130;
-                    this.total = 130 + this.delivery;
                 }
 
-                this.total = this.kg * this.total;
+                this.total = (this.kg * this.meat) + this.delivery;
             },
             goToStepTwo() {
                 // validate that meat is selected && kg is not empty
