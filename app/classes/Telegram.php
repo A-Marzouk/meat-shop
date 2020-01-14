@@ -1,6 +1,8 @@
 <?php
 namespace App\classes;
 
+use Illuminate\Support\Facades\Config;
+
 class Telegram {
     protected $token;
     protected $api = "https://api.telegram.org/bot";
@@ -23,7 +25,7 @@ class Telegram {
     }
 
     public function __construct($idChat = ''){
-        $this->token = '936141764:AAGMRS6PWjdBMHk7a27AmtkFS_KePbVB-F0';
+        $this->token = Config::get('services.telegram.token');
         $this->api .= $this->token;
         $this->idChat = $idChat;
     }

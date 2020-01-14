@@ -2,6 +2,13 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+
+$.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+
 import ExampleComponent from './components/ExampleComponent.vue';
 Vue.component('example-component', ExampleComponent);
 

@@ -1963,13 +1963,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderComponent",
   data: function data() {
     return {
       meatType: 'select',
-      meatSecondType: 'select',
-      kg: '',
+      meatSecondType: 'leg',
+      kg: 1,
       name: '',
       phone: '',
       email: '',
@@ -1979,7 +1989,21 @@ __webpack_require__.r(__webpack_exports__);
       currentStep: 1,
       delivery: 25,
       meat: 0,
-      Total: 25
+      total: 25,
+      meatPrices: {
+        beef: 145,
+        lamb: 140,
+        minced: 155,
+        burger: 170,
+        kebab: 175,
+        chicken: 90,
+        leg: 140,
+        rack: 120,
+        hind: 130
+      },
+      errors: {
+        generalError: ''
+      }
     };
   },
   methods: {
@@ -1989,6 +2013,59 @@ __webpack_require__.r(__webpack_exports__);
       this.meatSecondType = 'select';
       this.kg = '';
       this.comments = '';
+    },
+    calculateTotalPrice: function calculateTotalPrice() {
+      this.meat = this.meatPrices[this.meatType];
+      this.total = this.meatPrices[this.meatType] + this.delivery;
+
+      if (this.meatSecondType === 'rack') {
+        this.meat = 120;
+        this.total = 120 + this.delivery;
+      }
+
+      if (this.meatSecondType === 'hind') {
+        this.meat = 130;
+        this.total = 130 + this.delivery;
+      }
+
+      this.total = this.kg * this.total;
+    },
+    goToStepTwo: function goToStepTwo() {
+      // validate that meat is selected && kg is not empty
+      if (this.meatType === 'select' || this.meatType.length < 1 || this.kg.length < 1) {
+        this.errors.generalError = 'Please complete all required fields!';
+        return;
+      }
+
+      this.errors.generalError = '';
+      this.currentStep++;
+    },
+    finishOrder: function finishOrder() {
+      if (this.name.length < 3 || this.phone.length < 7 || this.email.length < 1 || this.deliverTime.length < 1 || this.address.length < 1) {
+        this.errors.generalError = 'Please complete all required fields!';
+        return;
+      }
+
+      this.errors.generalError = '';
+      this.currentStep++; // finished order | send to Telegram
+
+      this.telegramNotification();
+    },
+    telegramNotification: function telegramNotification() {
+      axios.post('/order', {
+        meatType: this.meatType,
+        meatSecondType: this.meatSecondType,
+        kg: this.kg,
+        name: this.name,
+        phone: this.phone,
+        email: this.email,
+        deliverTime: this.deliverTime,
+        address: this.address,
+        comments: this.comments,
+        total: this.total
+      }).then(function (response) {
+        console.log(response.data);
+      })["catch"]();
     }
   },
   mounted: function mounted() {}
@@ -2008,7 +2085,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".red-btn a[data-v-082b38fa] {\n  background: #cf1d16;\n  color: #fff !important;\n  text-transform: uppercase;\n  padding: 15px 20px !important;\n  line-height: 1;\n  font-weight: bold;\n  -webkit-transition: 0.3s all ease;\n  transition: 0.3s all ease;\n}\n.thanks-text[data-v-082b38fa] {\n  color: black;\n  font-weight: 600;\n  font-size: large;\n}\n.default-text[data-v-082b38fa] {\n  color: darkslategray;\n  font-weight: 600;\n}", ""]);
+exports.push([module.i, ".red-btn a[data-v-082b38fa] {\n  background: #cf1d16;\n  color: #fff !important;\n  text-transform: uppercase;\n  padding: 15px 20px !important;\n  line-height: 1;\n  font-weight: bold;\n  -webkit-transition: 0.3s all ease;\n  transition: 0.3s all ease;\n}\n.thanks-text[data-v-082b38fa] {\n  color: black;\n  font-weight: 600;\n  font-size: large;\n}\n.default-text[data-v-082b38fa] {\n  color: darkslategray;\n  font-weight: 600;\n}\n.error[data-v-082b38fa] {\n  color: red;\n  font-weight: 600;\n}", ""]);
 
 // exports
 
@@ -20323,19 +20400,22 @@ var render = function() {
                           staticClass: "custom-select w-100",
                           attrs: { name: "meatType", id: "meatType" },
                           on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.meatType = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            }
+                            change: [
+                              function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.meatType = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                              _vm.calculateTotalPrice
+                            ]
                           }
                         },
                         [
@@ -20343,28 +20423,20 @@ var render = function() {
                             _vm._v("-- Meat type --")
                           ]),
                           _vm._v(" "),
-                          _c("option", { attrs: { value: "beef" } }, [
-                            _vm._v("Beef")
-                          ]),
-                          _vm._v(" "),
                           _c("option", { attrs: { value: "lamb" } }, [
-                            _vm._v("Lamb")
+                            _vm._v("Lamb (From 120 UAH)")
                           ]),
                           _vm._v(" "),
-                          _c("option", { attrs: { value: "chicken" } }, [
-                            _vm._v("Chicken")
-                          ]),
-                          _vm._v(" "),
-                          _c("option", { attrs: { value: "minced-meat" } }, [
-                            _vm._v("Minced meat")
+                          _c("option", { attrs: { value: "minced" } }, [
+                            _vm._v("Minced meat (155 UAH)")
                           ]),
                           _vm._v(" "),
                           _c("option", { attrs: { value: "burger" } }, [
-                            _vm._v("Burger")
+                            _vm._v("Burger (170 UAH)")
                           ]),
                           _vm._v(" "),
-                          _c("option", { attrs: { value: "Lola kebab" } }, [
-                            _vm._v("Lola Kebab")
+                          _c("option", { attrs: { value: "kebab" } }, [
+                            _vm._v("Lola Kebab (175 UAH)")
                           ])
                         ]
                       )
@@ -20410,19 +20482,22 @@ var render = function() {
                           staticClass: "custom-select w-100",
                           attrs: { name: "second-type", id: "secondMeatType" },
                           on: {
-                            change: function($event) {
-                              var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function(o) {
-                                  return o.selected
-                                })
-                                .map(function(o) {
-                                  var val = "_value" in o ? o._value : o.value
-                                  return val
-                                })
-                              _vm.meatSecondType = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            }
+                            change: [
+                              function($event) {
+                                var $$selectedVal = Array.prototype.filter
+                                  .call($event.target.options, function(o) {
+                                    return o.selected
+                                  })
+                                  .map(function(o) {
+                                    var val = "_value" in o ? o._value : o.value
+                                    return val
+                                  })
+                                _vm.meatSecondType = $event.target.multiple
+                                  ? $$selectedVal
+                                  : $$selectedVal[0]
+                              },
+                              _vm.calculateTotalPrice
+                            ]
                           }
                         },
                         [
@@ -20430,23 +20505,19 @@ var render = function() {
                             _vm._v("Meat second type")
                           ]),
                           _vm._v(" "),
-                          _c("option", { attrs: { value: "leg-boneless" } }, [
+                          _c("option", { attrs: { value: "leg" } }, [
                             _vm._v(
-                              "\n                                Leg Boneless\n                            "
+                              "\n                                Leg Boneless (140 UAH)\n                            "
                             )
                           ]),
                           _vm._v(" "),
-                          _c(
-                            "option",
-                            { attrs: { value: "Swift-Lamb-Rack" } },
-                            [_vm._v("Swift Lamb Rack")]
-                          ),
+                          _c("option", { attrs: { value: "rack" } }, [
+                            _vm._v("Swift Lamb Rack (120 UAH)")
+                          ]),
                           _vm._v(" "),
-                          _c(
-                            "option",
-                            { attrs: { value: "lamb-hind-shank" } },
-                            [_vm._v("Lamb Hind Shank")]
-                          )
+                          _c("option", { attrs: { value: "hind" } }, [
+                            _vm._v("Lamb Hind Shank (130 UAH)")
+                          ])
                         ]
                       )
                     ]
@@ -20483,6 +20554,7 @@ var render = function() {
                         },
                         domProps: { value: _vm.kg },
                         on: {
+                          change: _vm.calculateTotalPrice,
                           input: function($event) {
                             if ($event.target.composing) {
                               return
@@ -20497,6 +20569,28 @@ var render = function() {
                   _c(
                     "div",
                     {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.generalError.length > 1,
+                          expression: "errors.generalError.length > 1"
+                        }
+                      ],
+                      staticClass: "error"
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(_vm.errors.generalError) +
+                          "\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
                       staticClass:
                         "d-flex w-100 align-items-end justify-content-end red-btn"
                     },
@@ -20505,11 +20599,7 @@ var render = function() {
                         "a",
                         {
                           attrs: { href: "javascript:void(0)" },
-                          on: {
-                            click: function($event) {
-                              _vm.currentStep++
-                            }
-                          }
+                          on: { click: _vm.goToStepTwo }
                         },
                         [_vm._v("Next")]
                       )
@@ -20684,6 +20774,28 @@ var render = function() {
               _c(
                 "div",
                 {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.generalError.length > 1,
+                      expression: "errors.generalError.length > 1"
+                    }
+                  ],
+                  staticClass: "error"
+                },
+                [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(_vm.errors.generalError) +
+                      "\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
                   staticClass:
                     "d-flex w-100 align-items-end justify-content-end red-btn"
                 },
@@ -20691,12 +20803,22 @@ var render = function() {
                   _c(
                     "a",
                     {
+                      staticClass: "mr-2",
                       attrs: { href: "javascript:void(0)" },
                       on: {
                         click: function($event) {
-                          _vm.currentStep++
+                          _vm.currentStep--
                         }
                       }
+                    },
+                    [_vm._v("Back")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      attrs: { href: "javascript:void(0)" },
+                      on: { click: _vm.finishOrder }
                     },
                     [_vm._v("FINISH ORDER")]
                   )
@@ -20746,7 +20868,7 @@ var render = function() {
               _c("div", { staticClass: "col-md-4" }, [
                 _vm._v(
                   "\n                    " +
-                    _vm._s(_vm.delivery + _vm.meat) +
+                    _vm._s(_vm.total) +
                     " UAH\n                "
                 )
               ])
@@ -20762,7 +20884,7 @@ var render = function() {
                 { staticClass: "col-md-12 text-center thanks-text mb-5" },
                 [
                   _vm._v(
-                    "\n                Thank you for your order! our sales manager will get in touch with you soon!\n            "
+                    "\n                    Thank you for your order! our sales manager will get in touch with you soon!\n                "
                   )
                 ]
               ),
@@ -32961,6 +33083,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+$.ajaxSetup({
+  headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+  }
+});
 
 Vue.component('example-component', _components_ExampleComponent_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
 

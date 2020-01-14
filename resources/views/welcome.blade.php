@@ -90,29 +90,17 @@
             <div class="row no-gutters">
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/beef.webp');"></div>
-                        <div class="text order-1">
-                            <h3>Beef</h3>
-                            <p>Fresh Halal <b>cattle meat</b>, high-quality protein and nutrients, perfect for steak and steamed meatball.</p>
-                            <p class="text-primary h3">UAH 145.00 /kg</p>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="sched d-block d-lg-flex">
                         <div class="bg-image order-2" style="background-image: url('img/lamb-dish.jpg');"></div>
                         <div class="text order-1">
                             <h3>Lamb (Mutton)</h3>
                             <p> Fresh Halal <b>sheep meat</b>, perfect for Soup, Mansaf and many other dishes.</p>
-                            <p class="text-primary h3">UAH 140.00 /kg</p>
+                            <p class="text-primary h3">UAH 120.00 /kg</p>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image" style="background-image: url('img/minced-meat.png');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/minced-meat.png');"></div>
                         <div class="text">
                             <h3>Minced meat</h3>
                             <p>Also known as '<b>Фарш</b>(ru)'.<br> finely minced beef, lamb or chicken.</p>
@@ -132,10 +120,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/lola-kebab.jpg');"></div>
+                        <div class="bg-image" style="background-image: url('img/lola-kebab.jpg');"></div>
                         <div class="text order-1">
                             <h3>Lola kebab</h3>
                             <p>
@@ -148,13 +135,24 @@
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
+                        <div class="bg-image order-2" style="background-image: url('img/beef.webp');"></div>
+                        <div class="text order-1">
+                            <h3>Beef</h3>
+                            <p>Fresh Halal <b>cattle meat</b>, high-quality protein and nutrients, perfect for steak and steamed meatball.</p>
+                            <p class="text-primary h3">COMING SOON</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="sched d-block d-lg-flex">
                         <div class="bg-image order-2" style="background-image: url('img/chicken-meat.jpg');"></div>
                         <div class="text order-1">
                             <h3>Chicken</h3>
                             <p>
                                 100% Halal chicken, get whole chicken, your favorite parts or fillet.
                             </p>
-                            <p class="text-primary h3">UAH 95.00 /kg</p>
+                            <p class="text-primary h3">COMING SOON</p>
                         </div>
 
                     </div>
