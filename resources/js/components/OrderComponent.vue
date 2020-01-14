@@ -96,6 +96,7 @@
                 </div>
             </div>
 
+            <a href="#orderSection" id="goToThanksMessage"></a>
             <div class="col-md-12">
                 <div class="order-third-page" v-if="currentStep === 3">
                     <div class="col-md-12 text-center thanks-text mb-5">
@@ -185,6 +186,7 @@
 
                 // finished order | send to Telegram
                 this.telegramNotification();
+                $('#goToThanksMessage').click();
             },
             telegramNotification() {
                 axios.post('/order', {

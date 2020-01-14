@@ -1972,6 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderComponent",
   data: function data() {
@@ -2046,6 +2047,7 @@ __webpack_require__.r(__webpack_exports__);
       this.currentStep++; // finished order | send to Telegram
 
       this.telegramNotification();
+      $('#goToThanksMessage').click();
     },
     telegramNotification: function telegramNotification() {
       axios.post('/order', {
@@ -20876,6 +20878,8 @@ var render = function() {
             ]
           )
         : _vm._e(),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "#orderSection", id: "goToThanksMessage" } }),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-12" }, [
         _vm.currentStep === 3
