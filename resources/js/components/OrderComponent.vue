@@ -21,11 +21,10 @@
                                     @change="calculateTotalPrice"
                                     v-show="meatType === 'lamb'" v-model="meatSecondType">
                                 <option value="select">Meat second type</option>
-                                <option value="leg">
-                                    Leg Boneless (140 UAH)
-                                </option>
+
                                 <option value="rack">Swift Lamb Rack (120 UAH)</option>
                                 <option value="hind">Lamb Hind Shank (130 UAH)</option>
+                                <option value="leg">Leg Boneless (140 UAH)</option>
                             </select>
                         </div>
                         <div class="form-group d-flex flex-column align-items-start">

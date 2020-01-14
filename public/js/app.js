@@ -1972,7 +1972,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderComponent",
   data: function data() {
@@ -20505,18 +20504,16 @@ var render = function() {
                             _vm._v("Meat second type")
                           ]),
                           _vm._v(" "),
-                          _c("option", { attrs: { value: "leg" } }, [
-                            _vm._v(
-                              "\n                                Leg Boneless (140 UAH)\n                            "
-                            )
-                          ]),
-                          _vm._v(" "),
                           _c("option", { attrs: { value: "rack" } }, [
                             _vm._v("Swift Lamb Rack (120 UAH)")
                           ]),
                           _vm._v(" "),
                           _c("option", { attrs: { value: "hind" } }, [
                             _vm._v("Lamb Hind Shank (130 UAH)")
+                          ]),
+                          _vm._v(" "),
+                          _c("option", { attrs: { value: "leg" } }, [
+                            _vm._v("Leg Boneless (140 UAH)")
                           ])
                         ]
                       )
