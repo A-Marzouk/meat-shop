@@ -12,7 +12,7 @@
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
                         </p>
-                        <p><a href="javascript:void(0)" class="btn btn-white btn-outline-white">ORDER NOW</a></p>
+                        <p><a href="#orderSection" class="btn btn-white btn-outline-white" >ORDER NOW</a></p>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                             Quality meat with unparalleled taste at the most affordable prices. <br/>
                             Fresh, Healthy and Halal.
                         </p>
-                        <p><a href="javascript:void(0)" class="btn btn-white btn-outline-white">ORDER NOW</a></p>
+                        <p><a href="#orderSection"  class="btn btn-white btn-outline-white">ORDER NOW</a></p>
                     </div>
                 </div>
             </div>
@@ -65,7 +65,7 @@
                     <h4 class="mb-4 text-primary">Fast Delivery</h4>
                     <p>
                        Halal meat in Ukraine now is in Zaporozhye.
-                        Beef, Lamb, chicken, burger, minced meat and Lola kebab. Delivery within 60 minutes.
+                        Beef, Lamb, chicken, burger, minced meat and Lola kebab. Delivery within 24 hours.
                     </p>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                         <div class="text">
                             <h3>Minced meat</h3>
                             <p>Also known as '<b>Фарш</b>(ru)'.<br> finely minced beef, lamb or chicken.</p>
-                            <p class="text-primary h3">UAH 145.00 /kg</p>
+                            <p class="text-primary h3">UAH 155.00 /kg</p>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                             <p>
                                 Make your own Halal Hamburger sandwiches at home with our perfect <b>beef burgers</b>
                             </p>
-                            <p class="text-primary h3">UAH 150.00 /kg</p>
+                            <p class="text-primary h3">UAH 170.00 /kg</p>
                         </div>
                     </div>
                 </div>
@@ -141,7 +141,7 @@
                             <p>
                                 Gathering for Shashlik ? Order Halal, Fresh and ready to cook <b>Lola Kebab</b>
                             </p>
-                            <p class="text-primary h3">UAH 160.00 /kg</p>
+                            <p class="text-primary h3">UAH 175.00 /kg</p>
                         </div>
 
                     </div>
@@ -154,7 +154,7 @@
                             <p>
                                 100% Halal chicken, get whole chicken, your favorite parts or fillet.
                             </p>
-                            <p class="text-primary h3">UAH 90.00 /kg</p>
+                            <p class="text-primary h3">UAH 95.00 /kg</p>
                         </div>
 
                     </div>
@@ -165,26 +165,28 @@
         </div>
     </section> <!-- .section -->
 
-    <section class="py-5 bg-light">
+    <section class="py-5 bg-light" id="orderSection">
+
+        <div class="clearfix mb-5 pb-5">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 text-center heading-wrap">
+                        <h2>Make order</h2>
+                        <span class="back-text-dark">order</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
                     <div class="row">
                         <div class="col-md-12">
-                            <h3>Subscribe Newsletter</h3>
-                            <p>Keep up to date with our monthly offers, Eid Adha and Ramadan news.</p>
-                        </div>
-
-                        <form action="" class="col-12">
-                            <div class="row align-items-center">
-                                <div class="col-md-8 mb-3 mb-md-0">
-                                    <input type="text" class="form-control" placeholder="Enter Email Address">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="submit" class="btn btn-primary btn-block" value="Subscribe">
-                                </div>
+                            <div id="orderComponent">
+                                <order-component></order-component>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

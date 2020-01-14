@@ -65,7 +65,7 @@
 
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item cta-btn">
-                        <a class="nav-link" style="display: flex;justify-content: center;" href="javascript:void(0)">ORDER NOW</a>
+                        <a class="nav-link" style="display: flex;justify-content: center;" href="#orderSection">ORDER NOW</a>
                     </li>
                 </ul>
 
@@ -142,21 +142,6 @@
 <script src="js/main.js"></script>
 <script src="js/app.js"></script>
 
-{{--<!--Start of Tawk.to Script-->--}}
-{{--<script type="text/javascript">--}}
-    {{--var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();--}}
-    {{--(function(){--}}
-        {{--var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];--}}
-        {{--s1.async=true;--}}
-        {{--s1.src='https://embed.tawk.to/5e15346e27773e0d832c6013/default';--}}
-        {{--s1.charset='UTF-8';--}}
-        {{--s1.setAttribute('crossorigin','*');--}}
-        {{--s0.parentNode.insertBefore(s1,s0);--}}
-    {{--})();--}}
-{{--</script>--}}
-{{--<!--End of Tawk.to Script-->--}}
-
-<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
     window.fbAsyncInit = function() {
