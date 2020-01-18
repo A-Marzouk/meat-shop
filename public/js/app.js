@@ -2017,11 +2017,11 @@ __webpack_require__.r(__webpack_exports__);
     calculateTotalPrice: function calculateTotalPrice() {
       this.meat = this.meatPrices[this.meatType];
 
-      if (this.meatSecondType === 'rack') {
+      if (this.meatType === 'lamb' && this.meatSecondType === 'rack') {
         this.meat = 120;
       }
 
-      if (this.meatSecondType === 'hind') {
+      if (this.meatType === 'lamb' && this.meatSecondType === 'hind') {
         this.meat = 130;
       }
 
