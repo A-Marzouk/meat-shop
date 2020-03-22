@@ -11,6 +11,7 @@
                                 <option value="select">-- Meat type --</option>
                                 <option value="lamb">Lamb (From 120 UAH)</option>
                                 <option value="minced">Minced meat (155 UAH)</option>
+                                <option value="chicken">Chicken fillet (85 UAH)</option>
                                 <option value="burger">Burger (170 UAH)</option>
                                 <option value="kebab">Lola Kebab (175 UAH)</option>
                             </select>
@@ -136,7 +137,7 @@
                     minced: 155,
                     burger: 170,
                     kebab: 175,
-                    chicken: 90,
+                    chicken: 85,
                     leg: 140,
                     rack: 120,
                     hind: 130
