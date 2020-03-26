@@ -146,13 +146,13 @@
                 </div>
                 <div class="col-md-6">
                     <div class="sched d-block d-lg-flex">
-                        <div class="bg-image order-2" style="background-image: url('img/chicken-meat.jpg');"></div>
+                        <div class="bg-image order-2" style="background-image: url('img/chicken-fillet.jpg');"></div>
                         <div class="text order-1">
-                            <h3>Chicken</h3>
+                            <h3>Chicken fillet</h3>
                             <p>
                                 100% Halal chicken, get whole chicken, your favorite parts or fillet.
                             </p>
-                            <p class="text-primary h3">COMING SOON</p>
+                            <p class="text-primary h3">85 UAH /kg</p>
                         </div>
 
                     </div>

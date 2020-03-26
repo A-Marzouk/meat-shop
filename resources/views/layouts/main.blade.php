@@ -53,12 +53,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="3" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="javascript:void(0)">Beef</a>
-                            <a class="dropdown-item" href="javascript:void(0)">Lamb</a>
-                            <a class="dropdown-item" href="javascript:void(0)">minced beef</a>
-                            <a class="dropdown-item" href="javascript:void(0)">Burger</a>
-                            <a class="dropdown-item" href="javascript:void(0)">Lola kebab</a>
-                            <a class="dropdown-item" href="javascript:void(0)">Chicken</a>
+                            <a class="dropdown-item" href="#orderSection">Beef</a>
+                            <a class="dropdown-item" href="#orderSection">Lamb</a>
+                            <a class="dropdown-item" href="#orderSection">minced beef</a>
+                            <a class="dropdown-item" href="#orderSection">Burger</a>
+                            <a class="dropdown-item" href="#orderSection">Lola kebab</a>
+                            <a class="dropdown-item" href="#orderSection">Chicken</a>
                         </div>
                     </li>
                     <li class="nav-item">

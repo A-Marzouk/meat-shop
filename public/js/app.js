@@ -1973,6 +1973,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "OrderComponent",
   data: function data() {
@@ -1996,7 +1997,7 @@ __webpack_require__.r(__webpack_exports__);
         minced: 155,
         burger: 170,
         kebab: 175,
-        chicken: 90,
+        chicken: 85,
         leg: 140,
         rack: 120,
         hind: 130
@@ -20429,6 +20430,10 @@ var render = function() {
                             _vm._v("Minced meat (155 UAH)")
                           ]),
                           _vm._v(" "),
+                          _c("option", { attrs: { value: "chicken" } }, [
+                            _vm._v("Chicken fillet (85 UAH)")
+                          ]),
+                          _vm._v(" "),
                           _c("option", { attrs: { value: "burger" } }, [
                             _vm._v("Burger (170 UAH)")
                           ]),
@@ -33318,8 +33323,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\OSPanel\domains\meat-shop\local.meat-shop.me\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\OSPanel\domains\meat-shop\local.meat-shop.me\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\OSPanel\domains\meat-shop\halalmeatinukraine.com\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\OSPanel\domains\meat-shop\halalmeatinukraine.com\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
