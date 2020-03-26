@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="https://halalmeatinukraine.com/favicon.png"/>
 
+    @laravelPWA
+
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
