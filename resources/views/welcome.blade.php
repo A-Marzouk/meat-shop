@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('main')
-    <section class="home-slider owl-carousel">
+    <section class="home-slider owl-carousel" id="home">
         <div class="slider-item" style="background-image: url('img/meat2.jpg');">
 
             <div class="container">
@@ -46,7 +46,7 @@
                     </span>
                     <h4 class="mb-4 text-primary">100% Halal</h4>
                     <p>
-                        Our meet is processed, made, produced and stored using methods that have been cleansed according to Islamic law.
+                        Our meat is processed, made, produced and stored using methods that have been approved by Islamic law.
                     </p>
                 </div>
                 <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 text-center">

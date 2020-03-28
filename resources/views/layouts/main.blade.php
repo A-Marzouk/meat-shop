@@ -144,7 +144,7 @@
             <div class="col-md-5 mb-5">
                 <div class="mb-5">
                     <h3>Opening Hours</h3>
-                    <p><strong class="d-block">Saturday-Friday</strong> 9AM - 8PM</p>
+                    <p><strong class="d-block">Monday-Saturday</strong> 9AM - 8PM</p>
                 </div>
                 <div>
                     <h3>Contact Info</h3>
@@ -160,7 +160,7 @@
             <div class="col-md-3 mb-5">
                 <h3>Quick Links</h3>
                 <ul class="list-unstyled footer-link">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#footer">About</a></li>
                     <li><a href="#products">Products</a></li>
                 </ul>
