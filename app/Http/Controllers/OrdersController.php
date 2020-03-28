@@ -16,15 +16,21 @@ class OrdersController extends Controller
 
         // create new order and new user
 
-        $user = User::create([
-            'name' => $request->user_name,
-            'phone' => $request->user_phone,
-            'email' => $request->user_email,
-            'is_registered' => 0 ,
-            'address' => $request->address ,
-        ]);
+        $user = User::where('email',$request->user_email)->first();
 
-        $order = Order::create($request->toArray());
+        if(!$user){
+            $user = User::create([
+                'name' => $request->user_name,
+                'phone' => $request->user_phone,
+                'email' => $request->user_email,
+                'is_registered' => 0 ,
+                'address' => $request->address ,
+            ]);
+        }
+
+
+
+        $order = $user->orders()->create($request->toArray());
 
         return 'success';
     }
