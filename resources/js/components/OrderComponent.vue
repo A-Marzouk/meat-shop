@@ -192,16 +192,16 @@
             },
             telegramNotification() {
                 axios.post('/order', {
-                    meatType: this.meatType,
-                    meatSecondType: this.meatSecondType,
-                    kg: this.kg,
-                    name: this.name,
-                    phone: this.phone,
-                    email: this.email,
-                    deliverTime: this.deliverTime,
+                    meat_type: this.meatType,
+                    meat_second_type: this.meatSecondType,
+                    kgs: this.kg,
+                    user_name: this.name,
+                    user_phone: this.phone,
+                    user_email: this.email,
+                    delivery_time: this.deliverTime,
                     address: this.address,
                     comments: this.comments,
-                    total : this.total
+                    total_price : this.total
                 })
                     .then((response) => {
                         console.log(response.data);
