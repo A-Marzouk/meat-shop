@@ -11,8 +11,8 @@
                                 <option value="select">-- Meat type --</option>
                                 <option value="lamb">Lamb (From 120 UAH)</option>
                                 <option value="minced">Minced meat (155 UAH)</option>
-                                <option value="chicken">Chicken fillet (85 UAH)</option>
-                                <option value="burger">Burger (170 UAH)</option>
+                                <option value="chicken">Chicken fillet (90 UAH)</option>
+                                <option value="burger">Burger (175 UAH)</option>
                                 <option value="kebab">Lola Kebab (175 UAH)</option>
                             </select>
                         </div>
@@ -25,7 +25,7 @@
 
                                 <option value="rack">Swift Lamb Rack (120 UAH)</option>
                                 <option value="hind">Lamb Hind Shank (130 UAH)</option>
-                                <option value="leg">Leg Boneless (140 UAH)</option>
+                                <option value="leg">Leg Boneless (145 UAH)</option>
                             </select>
                         </div>
                         <div class="form-group d-flex flex-column align-items-start">
@@ -133,12 +133,12 @@
                 total: 25,
                 meatPrices: {
                     beef: 145,
-                    lamb: 140,
+                    lamb: 145,
                     minced: 155,
-                    burger: 170,
+                    burger: 175,
                     kebab: 175,
-                    chicken: 85,
-                    leg: 140,
+                    chicken: 90,
+                    leg: 145,
                     rack: 120,
                     hind: 130
                 },

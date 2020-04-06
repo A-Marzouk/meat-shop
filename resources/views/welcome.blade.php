@@ -152,7 +152,7 @@
                             <p>
                                 100% Halal chicken, get whole chicken, your favorite parts or fillet.
                             </p>
-                            <p class="text-primary h3">85 UAH /kg</p>
+                            <p class="text-primary h3">90 UAH /kg</p>
                         </div>
 
                     </div>
